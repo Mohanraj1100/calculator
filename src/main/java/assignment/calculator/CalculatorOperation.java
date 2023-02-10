@@ -10,10 +10,10 @@ public class CalculatorOperation
     	double result;
     	Logger log = Logger.getLogger("hi");
     	Scanner sc = new Scanner(System.in);
-    	log.info("Enter Number");
+	String str = "Enter number";
+    	log.info(str);
     	num1 = sc.nextDouble();
-    	Operation
-    	cl;
+    	Operation cl;
     	result = num1;
     	boolean ch = true;
     	while(ch)
@@ -24,7 +24,7 @@ public class CalculatorOperation
         	{
         		case '+':
         		{
-        			log.info("Enter number");
+        			log.info(str);
                 	num2 = sc.nextDouble();
         			cl = new Add(result,num2);
         			cl.calculation();
@@ -33,7 +33,7 @@ public class CalculatorOperation
         		}
         		case '-':
         		{
-        			log.info("Enter number");
+        			log.info(str);
                 	num2 = sc.nextDouble();
         			cl = new Subtract(result,num2);
         			cl.calculation();
@@ -42,7 +42,7 @@ public class CalculatorOperation
         		}
         		case '*':
         		{
-        			log.info("Enter number");
+        			log.info(str);
                 	num2 = sc.nextDouble();
         			cl = new Multiply(result,num2);
         			cl.calculation();
@@ -51,7 +51,7 @@ public class CalculatorOperation
         		}
         		case '/':
         		{
-        			log.info("Enter number");
+        			log.info(str);
                 	num2 = sc.nextDouble();
         			cl = new Divide(result,num2);
         			cl.calculation();
@@ -70,7 +70,7 @@ public class CalculatorOperation
         		}
         	}
         	String res = String.valueOf(result);
-        	log.info("The result is"+ res);
+        	log.info(res);
     	}
     	sc.close();
     }
